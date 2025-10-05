@@ -1,29 +1,50 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# -----------------------
+# Java + IntelliJ IDEA .gitignore
+# -----------------------
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Compiled class files
+*.class
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Log files
+*.log
 
-### VS Code ###
+# BlueJ files (if ever used)
+*.ctxt
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IntelliJ IDEA project files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code project files (just in case)
 .vscode/
 
-### Mac OS ###
+# Build directories
+out/
+target/
+build/
+
+# Generated files
+*.bak
+*.tmp
+*.swp
+
+# OS-specific files
 .DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+
+# Maven
+.mvn/
