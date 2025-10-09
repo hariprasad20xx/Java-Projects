@@ -30,7 +30,16 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View,
     private static final Color BOARD_BACKGROUND_COLOR = Color.rgb(224, 242, 241);
     private static final String SUDOKU = "Sudoku";
 
+    public UserInterfaceImpl(Stage stage) {
+        this.stage = stage;
+        this.root = new Group();
+        this.textFieldCoordinates = new HashMap<>();
+        initializeUserInterface();
+    }
 
+    private void initializeUserInterface() {
+
+    }
 
     @Override
     public void setListener(IUserInterfaceContract.EventListener listener) {
