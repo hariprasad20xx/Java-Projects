@@ -1,4 +1,15 @@
 package sudoku.userinterface.logic;
 
-public class ControlLogic {
+import sudoku.userinterface.IUserInterfaceContract;
+
+public class ControlLogic implements IUserInterfaceContract.EventListener {
+    @Override
+    public void onSudokuInput(int x, int y, int input) {
+
+    }
+
+    @Override
+    public void onDialogClick() {
+
+    }
 }
