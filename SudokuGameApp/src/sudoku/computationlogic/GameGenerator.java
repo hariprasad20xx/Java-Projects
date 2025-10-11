@@ -1,6 +1,7 @@
 package sudoku.computationlogic;
 
 import sudoku.problemdomain.Coordinates;
+import sudoku.problemdomain.SudokuGame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +43,32 @@ public class GameGenerator {
                         value = 1;
                     }
                 }
+
+                int xCoordinate = random.nextInt(GRID_BOUNDARY);
+                int yCoordinate = random.nextInt(GRID_BOUNDARY);
+
+                if (newGrid[xCoordinate][yCoordinate] == 0) {
+                    newGrid[xCoordinate][yCoordinate] = value;
+
+                    if (GameLogic.sudokuIsInvalid(newGrid)) {
+                        newGrid[xCoordinate][yCoordinate] = 0;
+                        interrupt++;
+                    } else {
+                        allocTracker.add(new Coordinates(xCoordinate, yCoordinate));
+                        allocations++;
+                    }
+                }
             }
         }
 
-        return new int[0][];
+        return newGrid;
+    }
+
+    private static void clearArray(int[][] newGrid) {
+        for (int xIndex = 0; xIndex < SudokuGame.GRID_BOUNDARY; xIndex++) {
+            for (int yIndex = 0; yIndex < SudokuGame.GRID_BOUNDARY; yIndex++) {
+                newGrid[xIndex][yIndex] = 0;
+            }
+        }
     }
 }
