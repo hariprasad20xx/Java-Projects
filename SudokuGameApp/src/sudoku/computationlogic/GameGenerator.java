@@ -14,6 +14,9 @@ public class GameGenerator {
         return unsolveGame(getSolvedGame());
     }
 
+    private static int[][] unsolveGame(int[][] solvedGame) {
+    }
+
     private static int[][] getSolvedGame() {
         Random random = new Random(System.currentTimeMillis());
         int[][] newGrid = new int[GRID_BOUNDARY][GRID_BOUNDARY];
