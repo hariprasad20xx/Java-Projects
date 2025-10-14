@@ -20,6 +20,12 @@ public class GameLogic {
         return GameState.COMPLETE;
     }
 
+    private static boolean sudokuIsInvalid(int[][] grid) {
+        if (rowsAreInvalid(grid)) return true;
+        if (columnsAreInvalid(grid)) return true;
+        return squaresAreInvalid(grid);
+    }
+
     private static boolean tilesAreNotFilled(int[][] grid) {
         for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
             for (int yIndex = 0; yIndex < GRID_BOUNDARY; yIndex++) {
