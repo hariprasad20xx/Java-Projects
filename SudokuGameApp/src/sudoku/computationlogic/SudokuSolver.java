@@ -6,10 +6,10 @@ import static sudoku.problemdomain.SudokuGame.GRID_BOUNDARY;
 
 public class SudokuSolver {
     public static boolean puzzleIsSolvable(int[][] puzzle) {
-        Coordinates[] emptyCells = typeWritereEnumerate(puzzle);
+        Coordinates[] emptyCells = typeWriterEnumerate(puzzle);
     }
 
-    private static Coordinates[] typeWritereEnumerate(int[][] puzzle) {
+    private static Coordinates[] typeWriterEnumerate(int[][] puzzle) {
         Coordinates[] emptyCells = new Coordinates[40];
         int iterator = 0;
         for (int y = 0; y < GRID_BOUNDARY; y++) {
