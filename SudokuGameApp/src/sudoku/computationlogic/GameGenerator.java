@@ -58,7 +58,7 @@ public class GameGenerator {
             while (allocations < GRID_BOUNDARY) {
                 if (interrupt > 200) {
                     allocTracker.forEach(coord -> {
-                        newGrid[coord.getX()][coord.getY()] = 0
+                        newGrid[coord.getX()][coord.getY()] = 0;
                     });
 
                     interrupt = 0;
