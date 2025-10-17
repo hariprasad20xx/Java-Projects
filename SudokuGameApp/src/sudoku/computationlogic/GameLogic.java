@@ -25,7 +25,7 @@ public class GameLogic {
         return GameState.COMPLETE;
     }
 
-    private static boolean sudokuIsInvalid(int[][] grid) {
+    public static boolean sudokuIsInvalid(int[][] grid) {
         if (rowsAreInvalid(grid)) return true;
         if (columnsAreInvalid(grid)) return true;
         return squaresAreInvalid(grid);
@@ -115,7 +115,7 @@ public class GameLogic {
         return false;
     }
 
-    private static boolean collectionHasRepeats(List<Integer> collection) {
+    public static boolean collectionHasRepeats(List<Integer> collection) {
         for (int index = 1; index <= GRID_BOUNDARY; index++) {
             if (Collections.frequency(collection, index) > 1) return true;
         }
@@ -123,7 +123,7 @@ public class GameLogic {
         return false;
     }
 
-    private static boolean tilesAreNotFilled(int[][] grid) {
+    public static boolean tilesAreNotFilled(int[][] grid) {
         for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
             for (int yIndex = 0; yIndex < GRID_BOUNDARY; yIndex++) {
                 if (grid[xIndex][yIndex] == 0) return true;
