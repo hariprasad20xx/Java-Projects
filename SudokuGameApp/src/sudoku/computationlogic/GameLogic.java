@@ -31,6 +31,19 @@ public class GameLogic {
         return squaresAreInvalid(grid);
     }
 
+    private static boolean rowsAreInvalid(int[][] grid) {
+        for (int yIndex = 0; yIndex < GRID_BOUNDARY; yIndex++) {
+            List<Integer> row = new ArrayList<>();
+            for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
+                row.add(grid[xIndex][yIndex]);
+            }
+
+            if (collectionHasRepeats(row)) return true;
+        }
+
+        return false;
+    }
+
     private static boolean columnsAreInvalid(int[][] grid) {
         for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
             List<Integer> row = new ArrayList<>();
