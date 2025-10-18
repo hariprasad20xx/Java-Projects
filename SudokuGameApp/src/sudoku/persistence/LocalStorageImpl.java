@@ -3,10 +3,7 @@ package sudoku.persistence;
 import sudoku.problemdomain.IStorage;
 import sudoku.problemdomain.SudokuGame;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class LocalStorageImpl implements IStorage {
     private static File GAME_DATA = new File(
@@ -28,6 +25,15 @@ public class LocalStorageImpl implements IStorage {
 
     @Override
     public SudokuGame getGameData() throws IOException {
-        return null;
+        FileInputStream fileInputStream = new FileInputStream(GAME_DATA);
+        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+        try {
+            SudokuGame gameState = (SudokuGame) objectInputStream.readObject();
+            objectInputStream.close();
+            return gameState;
+        } catch (ClassNotFoundException e) {
+            throw new IOException("File Not Found");
+        }
     }
 }
