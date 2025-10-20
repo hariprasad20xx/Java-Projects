@@ -28,7 +28,7 @@ public class Main {
             } else if (guess < randomNumber) {
                 System.out.println("TOO LOW! Try again.");
             } else {
-                System.out.println("CORRECT! You guess it in " + attempts + " attempts");
+                System.out.println("CORRECT! You guessed it in " + attempts + " attempts");
             }
         } while (guess != randomNumber);
 
