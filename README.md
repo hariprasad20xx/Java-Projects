@@ -21,12 +21,6 @@ Each folder has its own project with a short description and runnable code.
 2. Open the project in IntelliJ IDEA.
 3. Navigate to the src folder of any project and run the Main.java (or similar).
 
-## 📖 Project Highlights
-- Student Management System → Demonstrates encapsulation, constructors, and collections.
-- Bank Account App → Implements inheritance and polymorphism.
-- Linked List → Custom implementation of singly linked list.
-- TicTacToe → Console-based 2-player game.
-
 ---
 ✨ This repository is a showcase of my learning and progress in Java. <br>
 Stay tuned for more updates!
