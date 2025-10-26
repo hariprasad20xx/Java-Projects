@@ -5,7 +5,6 @@ Each folder has its own project with a short description and runnable code.
 
 ## 📂 Project Categories
 - **OOP-Examples** → Demonstrates Object-Oriented Programming concepts in Java.  
-- **DataStructures** → Implementations of Linked List, Stack, Queue 
 - **SmallGames** → Fun projects like TicTacToe, Guess the Number, etc.  
 
 ## 🛠️ Tech Stack
