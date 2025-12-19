@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TicTacToe {
 
     static void displayBoard() {
