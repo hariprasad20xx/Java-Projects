@@ -27,6 +27,9 @@ public class GamePanel extends JPanel implements ActionListener {
     public void checkCollisions() {
 
     }
+    public void gameOver(Graphics g) {
+
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
