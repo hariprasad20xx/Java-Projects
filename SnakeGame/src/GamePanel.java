@@ -29,9 +29,11 @@ public class GamePanel extends JPanel implements ActionListener {
         this.addKeyListener(new MyKeyAdapter());
         startGame();
     }
-
     public void startGame() {
-
+        newApple();
+        running = true;
+        timer = new Timer(DELAY, this);
+        timer.start();
     }
     public void paintComponent(Graphics g) {
 
