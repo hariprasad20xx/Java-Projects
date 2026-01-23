@@ -13,7 +13,7 @@ public class GamePanel extends JPanel implements ActionListener {
     final int[] x = new int[GAME_UNITS];
     final int[] y = new int[GAME_UNITS];
     int bodyParts = 6;
-    int appleEaten;
+    int applesEaten;
     int appleX;
     int appleY;
     char direction = 'R';
@@ -57,6 +57,7 @@ public class GamePanel extends JPanel implements ActionListener {
                     g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
                 }
             }
+
         } else {
             gameOver(g);
         }
@@ -89,7 +90,7 @@ public class GamePanel extends JPanel implements ActionListener {
     public void checkApple() {
         if ((x[0] == appleX) && (y[0] == appleY)) {
             bodyParts++;
-            appleEaten++;
+            applesEaten++;
             newApple();
         }
     }
@@ -124,7 +125,11 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
     public void gameOver(Graphics g) {
-
+        // Game Over text
+        g.setColor(Color.red);
+        g.setFont(new Font("Ink Free", Font.BOLD, 75));
+        FontMetrics metrics = getFontMetrics(g.getFont());
+        g.drawString("Game Over", (SCREEN_WIDTH - metrics.stringWidth("Game Over"))/2, SCREEN_HEIGHT/2);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
