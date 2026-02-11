@@ -5,7 +5,7 @@ Each folder has its own project with a short description and runnable code.
 
 ## 📂 Project Categories
 - **OOP-Examples** → Demonstrates Object-Oriented Programming concepts in Java.  
-- **SmallGames** → Fun projects like TicTacToe, Guess the Number, etc.  
+- **SmallGames** → Fun projects like TicTacToe, Snake Game, Guess the Number, etc.  
 
 ## 🛠️ Tech Stack
 - Java (JDK 17 or above)  
