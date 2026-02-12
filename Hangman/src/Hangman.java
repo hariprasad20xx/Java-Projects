@@ -9,6 +9,6 @@ import java.util.Scanner;
 public class Hangman {
 
     public static void main(String[] args) {
-
+        ArrayList<String> words = new ArrayList<>();
     }
 }
