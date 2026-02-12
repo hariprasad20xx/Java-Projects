@@ -12,5 +12,8 @@ public class Hangman {
     public static void main(String[] args) {
         ArrayList<String> words = new ArrayList<>(List.of("banana", "pineapple", "apple", "orange", "watermelon", "blueberry"));
 
+        Random random = new Random();
+
+        String word = words.get(random.nextInt(words.size()));
     }
 }
